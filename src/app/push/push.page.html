@@ -1,9 +1,62 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>push</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>HMS Push</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">HMS Push</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
+  <!-- HEADER START -->
+  <div class="headerSection">
+    <div class="headerTitleWrapper">
+      <div class="headerTitle">HMS Push</div>
+    </div>
+    <div class="headerLogoWrapper">
+      <ion-img src="./assets/logo.png" class="headerLogo"></ion-img>
+    </div>
+  </div>
+  <!-- HEADER END -->
+
+  <div class="ion-padding">
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="getToken()"
+    >
+      Get Token
+    </ion-button>
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="topicSubscribe('all')"
+    >
+      Topic subscribe (all)
+    </ion-button>
+    <h4>Push Logs</h4>
+    <div id="pushLog"></div>
+
+    <!-- <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      routerLink="/home"
+    >
+      back
+    </ion-button> -->
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" edge="false">
+    <ion-fab-button (click)="clearLog()" color="danger">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

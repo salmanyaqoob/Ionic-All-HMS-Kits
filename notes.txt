@@ -8,12 +8,15 @@ keystore password: android
 alias: android
 alias password: android
 
-SHA1: F8:1B:E0:35:E9:BE:69:0F:6E:29:F5:50:C4:6E:CD:0A:F3:13:FA:1B
-SHA256: D2:88:1E:10:F9:AF:DD:D2:1D:40:E6:B6:8B:9C:99:5F:85:F7:7B:59:DE:AA:70:AF:C1:72:E4:0C:1A:1D:3B:F6
+SHA1: A4:73:83:28:C3:6A:B2:CF:2C:3D:47:F1:C4:F8:C4:F0:C1:B8:CF:7C
+SHA256: 73:00:85:0A:C7:7E:D6:ED:12:AD:79:83:9A:D4:D3:1A:9E:F2:9C:96:6E:E7:65:1A:50:6A:2A:71:C6:0B:1F:03
 
 Token:
-AFlU5eNGBXweHaf6ko1VHUJupliKKzJIgYVJRo9T3WEaqjIbFKsM_efCAMFvDH3eYs4LIG-tJID0_FZwN2QFGa5rMGVSS9On8sAT0XHpPIpdpjm-S2pTAsSwwnx4JA3hCQ
+APIUxPlUSB1AMHKFIneTinOHrF2PxF_pjQwSMNDZ2SYFJp7ZhwMZOostn6a7Gr1emmJOh3yWzkqKwDAinRaxqv-josh3_uC5M7wv0t2GZlvhjpaTakulXWVbrNbitZO9vw
 
+Build & Run:
+cordova run android --release -- --buildConfig=build.json
+cordova run android --debug -- --buildConfig=build.json
 
 Enabling/Disabling the Debug Mode:
 adb shell setprop debug.huawei.hms.analytics.app com.salman.cordova.all.hms
@@ -24,17 +27,15 @@ create page:
 ionic g page location
 
 
-
-
-
-
 Install plugin:
 cordova plugin add .\CordovaHMSPlugin\CordovaHMSGMSCheckPlugin
 cordova plugin add .\CordovaHMSPlugin\CordovaHMSLocationPlugin
 cordova plugin add .\CordovaHMSPlugin\cordovaHmsPushPlugin
-cordova plugin add .\CordovaHMSPlugin\CordovaHMSAccountPlugin
 cordova plugin add .\CordovaHMSPlugin\HMSAnalyticsPlugin
+cordova plugin add .\CordovaHMSPlugin\CordovaHMSAccountPlugin
 
+Remove Plugin:
 cordova plugin remove com.huawei.cordovahmsgmscheckplugin
 cordova plugin remove com.huawei.cordovahmspushplugin
 cordova plugin remove com.huawei.analyticsplugin
+cordova plugin remove com.huawei.cordovahmsaccountplugin

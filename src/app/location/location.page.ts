@@ -12,10 +12,6 @@ export class LocationPage implements OnInit {
 
   ngOnInit() {}
 
-  updateLog() {
-    document.getElementById("locationLog").innerHTML = this.locationLog;
-  }
-
   requestLocation() {
     console.log("RequestLocation");
     this.clearLog();
@@ -82,6 +78,10 @@ export class LocationPage implements OnInit {
     } catch (_e) {
       alert(JSON.stringify(_e, null, 4));
     }
+  }
+
+  updateLog() {
+    document.getElementById("locationLog").innerHTML = this.locationLog;
   }
 
   clearLog() {

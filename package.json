@@ -1,15 +1,17 @@
 {
   "name": "AllHMSIonic",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Salman Yaqoob",
+  "homepage": "https://huawei.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "android": "ionic cordova run android -l --debug -- --buildConfig=build.json",
+    "release": "ionic cordova run android -l --release -- --buildConfig=build.json"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +28,7 @@
     "com.huawei.cordovahmsgmscheckplugin": "file:CordovaHMSPlugin/CordovaHMSGMSCheckPlugin",
     "com.huawei.cordovahmslocationplugin": "file:CordovaHMSPlugin/CordovaHMSLocationPlugin",
     "cordova-android": "^8.1.0",
+    "cordovahmspushplugin": "file:CordovaHMSPlugin/cordovaHmsPushPlugin",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -71,7 +74,8 @@
       },
       "cordova-plugin-ionic-keyboard": {},
       "com.huawei.cordovahmsgmscheckplugin": {},
-      "com.huawei.cordovahmslocationplugin": {}
+      "com.huawei.cordovahmslocationplugin": {},
+      "com.huawei.cordovahmspushplugin": {}
     },
     "platforms": [
       "android"

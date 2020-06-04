@@ -242,10 +242,11 @@ ion-button {
   justify-content: center;
 }
 .headerTitle {
+  position: relative;
   font-size: 16px;
   font-weight: bold;
   color: #1b6ca8;
-  margin-top: 55%;
+  top: 45%;
 }
 .headerLogoWrapper {
   align-items: flex-end;
