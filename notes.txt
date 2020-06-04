@@ -1,0 +1,40 @@
+com.salman.ionic.allhms
+
+keytool -list -v -keystore D:\workspace\ionic\projects\AllHMSIonic\platforms\android\app\android.jks
+
+keystore: android.jks
+keystore password: android
+
+alias: android
+alias password: android
+
+SHA1: F8:1B:E0:35:E9:BE:69:0F:6E:29:F5:50:C4:6E:CD:0A:F3:13:FA:1B
+SHA256: D2:88:1E:10:F9:AF:DD:D2:1D:40:E6:B6:8B:9C:99:5F:85:F7:7B:59:DE:AA:70:AF:C1:72:E4:0C:1A:1D:3B:F6
+
+Token:
+AFlU5eNGBXweHaf6ko1VHUJupliKKzJIgYVJRo9T3WEaqjIbFKsM_efCAMFvDH3eYs4LIG-tJID0_FZwN2QFGa5rMGVSS9On8sAT0XHpPIpdpjm-S2pTAsSwwnx4JA3hCQ
+
+
+Enabling/Disabling the Debug Mode:
+adb shell setprop debug.huawei.hms.analytics.app com.salman.cordova.all.hms
+adb shell setprop debug.huawei.hms.analytics.app .none.
+
+
+create page:
+ionic g page location
+
+
+
+
+
+
+Install plugin:
+cordova plugin add .\CordovaHMSPlugin\CordovaHMSGMSCheckPlugin
+cordova plugin add .\CordovaHMSPlugin\CordovaHMSLocationPlugin
+cordova plugin add .\CordovaHMSPlugin\cordovaHmsPushPlugin
+cordova plugin add .\CordovaHMSPlugin\CordovaHMSAccountPlugin
+cordova plugin add .\CordovaHMSPlugin\HMSAnalyticsPlugin
+
+cordova plugin remove com.huawei.cordovahmsgmscheckplugin
+cordova plugin remove com.huawei.cordovahmspushplugin
+cordova plugin remove com.huawei.analyticsplugin

@@ -1,8 +1,9 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Ionic All HMS Kits
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>HMS Location</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -29,57 +30,43 @@
       expand="full"
       color="primary"
       class="ion-margin-bottom"
-      [routerLink]="['/hms-gms-check']"
+      (click)="requestLocation()"
     >
-      HMS / GMS Check
+      Request Location
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="removeLocation()"
+    >
+      Remove Location
     </ion-button>
     <ion-button
       expand="full"
       color="primary"
       class="ion-margin-bottom"
-      [routerLink]="['/location']"
+      (click)="lastLocation()"
     >
-      HMS Location
+      Last Location
     </ion-button>
+    <h4>Location Log</h4>
+    <div id="locationLog"></div>
+
     <ion-button
       expand="full"
       color="primary"
       class="ion-margin-bottom"
-      [routerLink]="['/maps']"
+      routerLink="/home"
     >
-      Huawei Map
-    </ion-button>
-    <ion-button
-      expand="full"
-      color="primary"
-      class="ion-margin-bottom"
-      [routerLink]="['/push']"
-    >
-      HMS Push
-    </ion-button>
-    <ion-button
-      expand="full"
-      color="primary"
-      class="ion-margin-bottom"
-      [routerLink]="['/account']"
-    >
-      Huawei Account
-    </ion-button>
-    <ion-button
-      expand="full"
-      color="primary"
-      class="ion-margin-bottom"
-      [routerLink]="['/iap']"
-    >
-      HMS In App Purchase
-    </ion-button>
-    <ion-button
-      expand="full"
-      color="primary"
-      class="ion-margin-bottom"
-      [routerLink]="['/scan']"
-    >
-      HMS Scan Kit
+      back
     </ion-button>
   </div>
+  <div class="ion-padding"></div>
+  <ion-fab vertical="bottom" horizontal="end" edge="false">
+    <ion-fab-button (click)="clearLog()" color="danger">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

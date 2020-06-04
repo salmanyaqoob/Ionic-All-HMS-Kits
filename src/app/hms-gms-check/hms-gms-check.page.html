@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>HMS / GMS Check</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">HMS / GMS Check</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- HEADER START -->
+  <div class="headerSection">
+    <div class="headerTitleWrapper">
+      <div class="headerTitle">HMS / GMS Check</div>
+    </div>
+    <div class="headerLogoWrapper">
+      <ion-img src="./assets/logo.png" class="headerLogo"></ion-img>
+    </div>
+  </div>
+  <!-- HEADER END -->
+
+  <div class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div>
+            <b>Mobile Service</b>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <b>Availability</b>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div>
+            GMS
+          </div>
+        </ion-col>
+        <ion-col ngClass="{{gmsAvailable?'success':'error'}}">
+          <span>{{gmsAvailable?"Available":"Not Available"}}</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div>
+            HMS
+          </div>
+        </ion-col>
+        <ion-col ngClass="{{hmsAvailable?'success':'error'}}">
+          <span>{{hmsAvailable?"Available":"Not Available"}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
