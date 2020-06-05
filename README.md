@@ -1,14 +1,14 @@
 # Ionic All HMS Kits
 
-In this repository we try to combine all **HMS Cordova Kits** in one Project!
+In this repository we try to combine all **HMS Ionic/Cordova Kits** in one Project!
 
-Cordova HMS packages integrated in this project :
+Ionic HMS packages integrated in this project :
 
 1.  **HMS / GMS Availability Checker.**
 
 2.  **HMS Location Kit.**
 
-3.  **Huawei Map.**
+3.  **Huawei Web Map.**
 
 4.  **HMS Push Kit.**
 
@@ -24,23 +24,15 @@ Cordova HMS packages integrated in this project :
 
 ### Application
 
-![enter image description here](./screenshots/Cordova-All-HMS-Kits.gif)
+![enter image description here](./screenshots/Ionic-All-HMS-Kits.gif)
 
 ### Screenshots
 
-![enter image description here](./screenshots/1.jpg)
+![enter image description here](./screenshots/1.jpg) ![enter image description here](./screenshots/2.jpg) ![enter image description here](./screenshots/3.jpg)
 
-![enter image description here](./screenshots/2.jpg)
+![enter image description here](./screenshots/4.jpg) ![enter image description here](./screenshots/5.jpg) ![enter image description here](./screenshots/6.jpg)
 
-![enter image description here](./screenshots/3.jpg)
-
-![enter image description here](./screenshots/4.jpg)
-
-![enter image description here](./screenshots/5.jpg)
-
-![enter image description here](./screenshots/6.jpg)
-
-![enter image description here](./screenshots/7.jpg)
+![enter image description here](./screenshots/7.jpg) ![enter image description here](./screenshots/8.jpg) ![enter image description here](./screenshots/9.jpg)
 
 ## Project Guide
 
@@ -69,22 +61,22 @@ Cordova HMS packages integrated in this project :
 ### Install plugins to Project
 
     cordova plugin add .\CordovaHMSPlugin\CordovaHMSGMSCheckPlugin
-    cordova plugin add .\CordovaHMSPlugin\CordovaHMSGMSCheckPlugin
     cordova plugin add .\CordovaHMSPlugin\CordovaHMSLocationPlugin
     cordova plugin add .\CordovaHMSPlugin\cordovaHmsPushPlugin
-    cordova plugin add .\CordovaHMSPlugin\CordovaHMSAccountPlugin
     cordova plugin add .\CordovaHMSPlugin\HMSAnalyticsPlugin
+    cordova plugin add .\CordovaHMSPlugin\CordovaHMSAccountPlugin
 
 ### Remove plugins from Project
 
     cordova plugin remove com.huawei.cordovahmsgmscheckplugin
     cordova plugin remove com.huawei.cordovahmspushplugin
     cordova plugin remove com.huawei.analyticsplugin
+    cordova plugin remove com.huawei.cordovahmsaccountplugin
 
 ### Run Application on HMS Device
 
-    cordova run android --release -- --buildConfig=build.json
-    cordova run android --debug -- --buildConfig=build.json
+    ionic cordova run android --release -- --buildConfig=build.json
+    ionic cordova run android --debug -- --buildConfig=build.json
 
 ## Official HMS Resources
 
@@ -92,7 +84,7 @@ Cordova HMS packages integrated in this project :
 
 #### Codelab:[https://developer.huawei.com/consumer/en/codelab/HMSMapKit/index.html#0](https://developer.huawei.com/consumer/en/codelab/HMSMapKit/index.html#0)
 
-#### Document:[https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/hms-map-v4-abouttheservice](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/hms-map-v4-abouttheservice)
+#### Document:[https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/hms-map-js-about-the-service](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/hms-map-js-about-the-service)
 
 ### Huawei Location Kit:
 
@@ -120,4 +112,4 @@ Cordova HMS packages integrated in this project :
 
 ## Note:
 
-This article and repository will update frequently upon new HMS Kits compatibility with Cordova framework.
+This article and repository will update frequently upon new HMS Kits compatibility with ionic framework.
