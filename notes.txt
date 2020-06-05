@@ -15,6 +15,7 @@ Token:
 APIUxPlUSB1AMHKFIneTinOHrF2PxF_pjQwSMNDZ2SYFJp7ZhwMZOostn6a7Gr1emmJOh3yWzkqKwDAinRaxqv-josh3_uC5M7wv0t2GZlvhjpaTakulXWVbrNbitZO9vw
 
 Build & Run:
+npm run release
 cordova run android --release -- --buildConfig=build.json
 cordova run android --debug -- --buildConfig=build.json
 

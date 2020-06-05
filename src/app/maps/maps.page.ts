@@ -64,23 +64,28 @@ export class MapsPage implements OnInit {
         (_res) => {
           this.currentLocation = _res;
           this.showMap(this.getLat(), this.getLong());
-          var marker = new HWMapJsSDK.HWMarker({
+          var myMarker = new HWMapJsSDK.HWMarker({
             map: this.map,
             position: { lat: this.getLat(), lng: this.getLong() },
-            label: "My Location",
+            label: "My",
             icon: {
               opacity: 0.5,
             },
           });
           var map = this.map;
-          var infoWindow = new HWMapJsSDK.HWInfoWindow({
+          let infoWindow = new HWMapJsSDK.HWInfoWindow({
             map,
             position: { lat: this.getLat(), lng: this.getLong() },
             content: "My location",
             offset: [0, -40],
           });
-          this.marker.push(marker);
-          // this.map.setZoom(16);
+          infoWindow.close();
+
+          myMarker.addListener("click", () => {
+            infoWindow.open(myMarker);
+          });
+          this.marker.push(myMarker);
+          this.map.setZoom(16);
         },
         (_err) => {
           alert(_err);
@@ -113,7 +118,7 @@ export class MapsPage implements OnInit {
             lat: this.convertCoordinates(branch.latitude),
             lng: this.convertCoordinates(branch.longitude),
           },
-          label: "A",
+          label: "B",
           icon: {
             opacity: 0.8,
           },
@@ -185,5 +190,6 @@ export class MapsPage implements OnInit {
       lat: this.convertCoordinates(selectedBranches[0].latitude),
       lng: this.convertCoordinates(selectedBranches[0].longitude),
     });
+    this.map.setZoom(10);
   }
 }
