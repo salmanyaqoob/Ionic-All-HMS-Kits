@@ -1,9 +1,41 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>maps</ion-title>
+<ion-header [translucent]="true" class="ion-text-center">
+  <ion-toolbar class="ion-margin-top">
+    <ion-title>
+      Huawei Map
+    </ion-title>
+
+    <div class="ion-margin">
+      <!-- <div>{{selectedBranches?.length | json}}</div>
+      <ion-button (click)="showMap()">Show Map</ion-button>
+      <ion-button (click)="addMarkers()">Add Marker</ion-button>
+      <ion-button>Show Window</ion-button> -->
+      <ion-select
+        placeholder="Select Region"
+        (ionChange)="onChangeRegion($event)"
+      >
+        <ion-select-option
+          *ngFor="let region of regions | async"
+          [value]="region.id"
+        >
+          {{region.name}}
+        </ion-select-option>
+      </ion-select>
+
+      <ion-select placeholder="Select City" (ionChange)="onChangeCity($event)">
+        <ion-select-option *ngFor="let city of cities" [value]="city.id">
+          {{city.name}}
+        </ion-select-option>
+      </ion-select>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <!-- <div>{{cities | json}}</div> -->
+  <!-- <div class="screen" *ngFor="let data of allBranches | async">
+    {{data.address}}
+  </div> -->
 
+  <!-- <div>{{selectedBranches | json}}</div> -->
+  <div id="map"></div>
 </ion-content>

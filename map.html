@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://mapapi.cloud.huawei.com/mapjs/v1/api/js?callback=initMap&key=CV8Aw1EA9pku7HPWfUaUNManWlstMIzk6zbNfHXZ9NFJrOUx1QDTIqF2U2oNT70nwVh3wVJTVDz0GFdKFwaOnyKwWdOV"></script>
+    <script>
+      function initMap() {
+        const mapOptions = {};
+        mapOptions.center = { lat: 48.856613, lng: 2.352222 };
+        mapOptions.zoom = 8;
+        mapOptions.language = "ENG";
+        const map = new HWMapJsSDK.HWMap(
+          document.getElementById("map"),
+          mapOptions
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>

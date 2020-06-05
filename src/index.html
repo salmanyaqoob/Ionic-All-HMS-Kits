@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ionic App</title>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Ionic App</title>
+    <base href="/" />
 
-  <base href="/" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
 
-  <meta name="color-scheme" content="light dark" />
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <script>
+      function initMap() {
+        // const mapOptions = {};
+        // mapOptions.center = { lat: 48.856613, lng: 2.352222 };
+        // mapOptions.zoom = 8;
+        // mapOptions.language = "ENG";
+        // const map = new HWMapJsSDK.HWMap(
+        //   document.getElementById("map"),
+        //   mapOptions
+        // );
+      }
+      function loadMapScript() {
+        const apiKey = encodeURIComponent(
+          "CV8Aw1EA9pku7HPWfUaUNManWlstMIzk6zbNfHXZ9NFJrOUx1QDTIqF2U2oNT70nwVh3wVJTVDz0GFdKFwaOnyKwWdOV"
+        );
+        const src = `https://mapapi.cloud.huawei.com/mapjs/v1/api/js?callback=initMap&key=${apiKey}`;
 
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-</head>
-
-<body>
-  <app-root></app-root>
-</body>
-
+        const mapScript = document.createElement("script");
+        mapScript.setAttribute("src", src);
+        document.head.appendChild(mapScript);
+      }
+      loadMapScript();
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>

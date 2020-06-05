@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "question": "Who is this player ?",
+    "img": "01.jpg"
+  },
+  {
+    "id": 2,
+    "question": "Who is this actor ?",
+    "img": "02.jpg"
+  }
+]
