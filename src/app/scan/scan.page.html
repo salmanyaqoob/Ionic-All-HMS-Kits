@@ -1,11 +1,31 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>scan</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>HMS Scan Kit</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="container">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">HMS Scan Kit</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- HEADER START -->
+  <div class="headerSection">
+    <div class="headerTitleWrapper">
+      <div class="headerTitle">HMS Scan Kit</div>
+    </div>
+    <div class="headerLogoWrapper">
+      <ion-img src="./assets/logo.png" class="headerLogo"></ion-img>
+    </div>
+  </div>
+  <!-- HEADER END -->
+
+  <div class="container">
     <h2>Coming Soon</h2>
   </div>
 </ion-content>
