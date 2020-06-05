@@ -81,14 +81,14 @@ public class CordovaHMSAccountPlugin extends CordovaPlugin {
 
     private void signInWithIdToken() {
         HuaweiIdAuthParams mHuaweiIdAuthParams =
-            new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM).setIdToken().createParams();
+            new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM).setIdToken().setEmail().createParams();
         mHuaweiIdAuthService = HuaweiIdAuthManager.getService(cordova.getActivity(), mHuaweiIdAuthParams);
         cordova.startActivityForResult(this, mHuaweiIdAuthService.getSignInIntent(), REQUEST_SIGN_IN_LOGIN);
     }
 
     private void signInWithAuthCode() {
         HuaweiIdAuthParams authParams =
-            new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM).setAuthorizationCode()
+            new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM).setEmail().setAuthorizationCode()
                 .createParams();
         mHuaweiIdAuthService = HuaweiIdAuthManager.getService(cordova.getActivity(), authParams);
         cordova.startActivityForResult(this, mHuaweiIdAuthService.getSignInIntent(), REQUEST_SIGN_IN_LOGIN_CODE);
@@ -118,9 +118,26 @@ public class CordovaHMSAccountPlugin extends CordovaPlugin {
                 Task<AuthHuaweiId> authHuaweiIdTask = HuaweiIdAuthManager.parseAuthResultFromIntent(data);
                 if (authHuaweiIdTask.isSuccessful()) {
                     AuthHuaweiId huaweiAccount = authHuaweiIdTask.getResult();
-                    String msg = "signIn success " + huaweiAccount.getDisplayName();
-                    outputCallbackContext(0, msg);
-                    Log.i(TAG, msg);
+                    String name = huaweiAccount.getDisplayName();
+                    String email = huaweiAccount.getEmail();
+                    String avatarUri = huaweiAccount.getAvatarUri().toString();
+
+                    try {
+                        JSONObject jsonObj = new JSONObject();
+                        jsonObj.put("name", name);
+                        jsonObj.put("email", email);
+                        jsonObj.put("avatarUri", avatarUri);
+
+                        String msg = "Name: " + name + " Email: " + email + " AvatarUri: " + avatarUri;
+                        String msgJSONString = jsonObj.toString();
+
+                        outputCallbackContext(0, msgJSONString);
+                        Log.i(TAG, msg);
+                    } catch(Exception e){
+                        Log.e(TAG, e.toString());
+                        outputCallbackContext(1, e.toString());
+                    }
+                    
                 } else {
                     String msg = "signIn failed: " + ((ApiException) authHuaweiIdTask.getException()).getStatusCode();
                     outputCallbackContext(1, msg);

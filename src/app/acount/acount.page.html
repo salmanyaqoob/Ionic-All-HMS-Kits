@@ -1,9 +1,82 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>acount</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>HMS Account Kit</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">HMS Account Kit</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
+  <!-- HEADER START -->
+  <div class="headerSection">
+    <div class="headerTitleWrapper">
+      <div class="headerTitle">HMS Account Kit</div>
+    </div>
+    <div class="headerLogoWrapper">
+      <ion-img src="./assets/logo.png" class="headerLogo"></ion-img>
+    </div>
+  </div>
+  <!-- HEADER END -->
+
+  <div class="ion-padding">
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="signInByIdToken()"
+    >
+      SignIn by IdToken
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="signInByAuthCode()"
+    >
+      signIn by AuthCode
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="signOut()"
+    >
+      SignOut
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="revokeAuth()"
+    >
+      revokeAuth
+    </ion-button>
+
+    <h4>Account Logs</h4>
+    <div id="accountLog"></div>
+
+    <!-- <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      routerLink="/home"
+    >
+      back
+    </ion-button> -->
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" edge="false">
+    <ion-fab-button (click)="clearLog()" color="danger">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
