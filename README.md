@@ -22,7 +22,7 @@ Ionic HMS packages integrated in this project :
 
 ## Dowload APK
 
-For testing of ionic project, please [donwload](./apks/ionic-all-hms-release.apk) the apk file.
+For testing of ionic project, please [donwload](https://github.com/salmanyaqoob/Ionic-All-HMS-Kits/raw/master/apks/ionic-all-hms-release.apk) the apk file.
 
 ## Screenshots
 
