@@ -20,6 +20,10 @@ Ionic HMS packages integrated in this project :
 
 8.  **HMS Site Kit.** (Coming Soon)
 
+## Dowload APK
+
+For testing of ionic project, please [donwload](./apks/ionic-all-hms-release.apk) the apk file.
+
 ## Screenshots
 
 ### Application
