@@ -24,7 +24,7 @@ Ionic HMS packages integrated in this project :
 
 ## Repository link
 
-[https://github.com/salmanyaqoob/React-Native-HMS-All-Kits](https://github.com/salmanyaqoob/React-Native-HMS-All-Kits)
+[https://github.com/salmanyaqoob/Ionic-All-HMS-Kits](https://github.com/salmanyaqoob/Ionic-All-HMS-Kits)
 
 ## Dowload APK
 
