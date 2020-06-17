@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "android": "ionic cordova run android -l --debug -- --buildConfig=build.json",
-    "release": "ionic cordova run android -l --release -- --buildConfig=build.json"
+    "release": "ionic cordova run android -l --release -- --buildConfig=build.json",
+    "android-build": "ionic cordova build android --release -- --buildConfig=build.json"
   },
   "private": true,
   "dependencies": {
