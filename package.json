@@ -30,6 +30,7 @@
     "com.huawei.cordovahmsgmscheckplugin": "file:CordovaHMSPlugin/CordovaHMSGMSCheckPlugin",
     "com.huawei.cordovahmslocationplugin": "file:CordovaHMSPlugin/CordovaHMSLocationPlugin",
     "cordova-android": "^8.1.0",
+    "cordova-plugin-hms-site": "file:CordovaHMSPlugin/cordova-plugin-hms-site",
     "cordovahmspushplugin": "file:CordovaHMSPlugin/cordovaHmsPushPlugin",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
@@ -79,7 +80,8 @@
       "com.huawei.cordovahmslocationplugin": {},
       "com.huawei.cordovahmspushplugin": {},
       "com.huawei.analyticsplugin": {},
-      "com.huawei.cordovahmsaccountplugin": {}
+      "com.huawei.cordovahmsaccountplugin": {},
+      "cordova-plugin-hms-site": {}
     },
     "platforms": [
       "android"

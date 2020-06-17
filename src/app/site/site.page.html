@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>HMS Site</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">HMS Site</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- HEADER START -->
+  <div class="headerSection">
+    <div class="headerTitleWrapper">
+      <div class="headerTitle">HMS Site</div>
+    </div>
+    <div class="headerLogoWrapper">
+      <ion-img src="./assets/logo.png" class="headerLogo"></ion-img>
+    </div>
+  </div>
+  <!-- HEADER END -->
+
+  <div class="ion-padding">
+    <ion-item color="light">
+      <ion-input
+        type="string"
+        placeholder="Input Search Term"
+        [(ngModel)]="siteText"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="onTextSearch()"
+    >
+      Text Search
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="onDetailSearch()"
+    >
+      Detail Search
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="onQuerySuggestion()"
+    >
+      Query Suggestion
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="onNearbySearch()"
+    >
+      NearBy Search
+    </ion-button>
+
+    <h4>Site Logs</h4>
+    <div id="sitelog"></div>
+
+    <!-- <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      routerLink="/home"
+    >
+      back
+    </ion-button> -->
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" edge="false">
+    <ion-fab-button (click)="clearLog()" color="danger">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

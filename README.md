@@ -18,9 +18,9 @@ Ionic HMS packages integrated in this project :
 
 6.  **Huawei Account Kit.**
 
-7.  **HMS In App Purchase Kit.** (Coming Soon)
+7.  **HMS Site Kit.**
 
-8.  **HMS Site Kit.** (Coming Soon)
+8.  **HMS In App Purchase Kit.** (Coming Soon)
 
 ## Repository link
 
@@ -75,6 +75,7 @@ For testing of ionic project, please [donwload](https://github.com/salmanyaqoob/
     cordova plugin add .\CordovaHMSPlugin\cordovaHmsPushPlugin
     cordova plugin add .\CordovaHMSPlugin\CordovaHMSAccountPlugin
     cordova plugin add .\CordovaHMSPlugin\HMSAnalyticsPlugin
+    cordova plugin add .\CordovaHMSPlugin\cordova-plugin-hms-site
 
 ### Remove plugins from Project
 
@@ -83,6 +84,7 @@ For testing of ionic project, please [donwload](https://github.com/salmanyaqoob/
     cordova plugin remove com.huawei.analyticsplugin
     cordova plugin remove com.huawei.cordovahmsaccountplugin
     cordova plugin remove com.huawei.cordovahmslocationplugin
+    cordova plugin remove cordova-plugin-hms-site
 
 ### Run Application on HMS Device
 
