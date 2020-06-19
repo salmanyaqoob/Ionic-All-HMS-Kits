@@ -1,0 +1,126 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Huawei Ads</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Huawei Ads</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- HEADER START -->
+  <div class="headerSection">
+    <div class="headerTitleWrapper">
+      <div class="headerTitle">Huawei Ads</div>
+    </div>
+    <div class="headerLogoWrapper">
+      <ion-img src="./assets/logo.png" class="headerLogo"></ion-img>
+    </div>
+  </div>
+  <!-- HEADER END -->
+
+  <div class="ion-padding">
+    <div class="appTest">
+      <ul>
+        <li>
+          <div>
+            <button id="getReferrerDetails" class="button button-teal">
+              Get ReferrerDetails
+            </button>
+            <br />
+            <div id="referrerDetailsResult" class="code"></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <button id="getOaidResult" class="button button-teal">
+              Get OaidResult
+            </button>
+            <br />
+            <div id="oaidResult" class="code"></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <select id="bannerAdSize"></select>
+            <select id="bannerAdBgColor"></select>
+            <select id="bannerAdPosition">
+              <option value="top">Top</option>
+              <option value="bottom" selected>Bottom</option>
+            </select>
+            <br /><br />
+            <button id="bannerAdCreate" class="button button-blue">
+              Create BannnerAd
+            </button>
+            <br />
+          </div>
+        </li>
+        <li>
+          <select id="nativeAdTemplate">
+            <option value="small" selected>Small</option>
+            <option value="full">Full</option>
+            <option value="banner">Banner</option>
+            <option value="video">Video</option>
+          </select>
+          <br /><br />
+          <button id="nativeAdCreate" class="button button-blue">
+            Create NativeAD
+          </button>
+        </li>
+        <li>
+          <!-- NativeAd Holder -->
+          <div id="native-ad-element">
+            NativeAd will appear here
+          </div>
+        </li>
+        <li>
+          <select id="splashLogoAnchor">
+            <option value="top">Top</option>
+            <option value="bottom" selected>Bottom</option>
+          </select>
+          <select id="splashLogoColor"> </select>
+          <br />
+          <br />
+          <button id="splashAdCreate" class="button button-blue">
+            Create SplashAD
+          </button>
+        </li>
+        <li>
+          <button id="interstitialAdCreate" class="button button-blue">
+            Create InterstitialAD
+          </button>
+        </li>
+        <li>
+          <button id="rewardAdCreate" class="button button-blue">
+            Create RewardAd
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      (click)="getToken()"
+    >
+      Get Token
+    </ion-button>
+     -->
+
+    <ion-button
+      expand="full"
+      color="primary"
+      class="ion-margin-bottom"
+      routerLink="/home"
+    >
+      back
+    </ion-button>
+  </div>
+</ion-content>

@@ -76,6 +76,7 @@ For testing of ionic project, please [donwload](https://github.com/salmanyaqoob/
     cordova plugin add .\CordovaHMSPlugin\CordovaHMSAccountPlugin
     cordova plugin add .\CordovaHMSPlugin\HMSAnalyticsPlugin
     cordova plugin add .\CordovaHMSPlugin\cordova-plugin-hms-site
+    cordova plugin add .\CordovaHMSPlugin\cordova-plugin-hms-ads
 
 ### Remove plugins from Project
 
@@ -85,6 +86,7 @@ For testing of ionic project, please [donwload](https://github.com/salmanyaqoob/
     cordova plugin remove com.huawei.cordovahmsaccountplugin
     cordova plugin remove com.huawei.cordovahmslocationplugin
     cordova plugin remove cordova-plugin-hms-site
+    cordova plugin remove cordova-plugin-hms-ads
 
 ### Run Application on HMS Device
 

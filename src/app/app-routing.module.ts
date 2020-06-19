@@ -58,6 +58,10 @@ const routes: Routes = [
     loadChildren: () =>
       import("./site/site.module").then((m) => m.SitePageModule),
   },
+  {
+    path: 'ads',
+    loadChildren: () => import('./ads/ads.module').then( m => m.AdsPageModule)
+  },
 ];
 
 @NgModule({
