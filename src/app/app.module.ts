@@ -11,6 +11,8 @@ import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { LoadMapDataService } from "./services/load-map-data.service";
 
+import { Device } from '@ionic-native/device/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -25,6 +27,7 @@ import { LoadMapDataService } from "./services/load-map-data.service";
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     LoadMapDataService,
+    Device,
   ],
   bootstrap: [AppComponent],
 })

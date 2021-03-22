@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-
+import { Platform } from '@ionic/angular';
+import { Device } from '@ionic-native/device/ngx';
+// import {Device} from 'ionic-native';
 declare var cordova: any;
 
 @Component({
@@ -10,12 +12,37 @@ declare var cordova: any;
 export class HmsGmsCheckPage implements OnInit {
   hmsAvailable: boolean = null;
   gmsAvailable: boolean = null;
+  deviceInfo: string = null;
 
-  constructor() {}
+  constructor(private device: Device, private platform: Platform) { 
+    platform.ready().then(() => {
+      this.deviceInfo = device.manufacturer;
+    });
 
-  ngOnInit() {
-    // this.checkGMS();
+  }
+
+  ngOnInit() 
+  {
+    this.isHuaweiDevice().then(isHuawei=>{
+      if(isHuawei === true){
+        alert("Huawei Device");
+      } else {
+        alert("Not Huawei Device");
+      }
+    });
     this.checkHMSGMS();
+  }
+
+  async isHuaweiDevice(): Promise<boolean>{
+    var isHuawei: boolean = false;
+    var ready = await this.platform.ready();
+    if(ready){
+      var manufacturer = this.device.manufacturer;
+      if(manufacturer === 'HUAWEI'){
+        isHuawei = true;
+      }
+    }
+    return isHuawei
   }
 
   async checkHMSGMS() {

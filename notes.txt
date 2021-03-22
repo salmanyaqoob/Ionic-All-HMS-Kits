@@ -16,8 +16,8 @@ APIUxPlUSB1AMHKFIneTinOHrF2PxF_pjQwSMNDZ2SYFJp7ZhwMZOostn6a7Gr1emmJOh3yWzkqKwDAi
 
 Build & Run:
 npm run release
-cordova run android --release -- --buildConfig=build.json
-cordova run android --debug -- --buildConfig=build.json
+ionic cordova run android --release -- --buildConfig=build.json
+ionic cordova run android --debug -- --buildConfig=build.json
 
 Enabling/Disabling the Debug Mode:
 adb shell setprop debug.huawei.hms.analytics.app com.salman.cordova.all.hms
